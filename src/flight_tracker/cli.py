@@ -30,7 +30,7 @@ def _make_parser() -> argparse.ArgumentParser:
 
     search = sub.add_parser("search", help="Найти рейс по номеру")
     search.add_argument("flight", help="Например, BA249 или SU2134")
-    search.add_argument("--date", dest="flight_date", help="Дата рейса YYYY-MM-DD (по умолчанию сегодня)")
+    search.add_argument("--date", dest="flight_date", help="Дата рейса YYYY-MM-DD (требует доступа к историческим данным)")
     search.add_argument("--demo", action="store_true", help="Использовать демонстрационные данные без API")
 
     watch = sub.add_parser("watch", help="Найти рейс и добавить его в список отслеживания")
